@@ -137,7 +137,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
 					}
 				});
 
-				var stockUrl = 'https://www.ingress.com/intel?ll='+map.getCenter().lat+','+map.getCenter().lng+'&z='+map.getZoom()+'&pls='+stockLinks.map(function(link){return link.join(',');}).join('_');
+				var stockUrl = 'https://intel.ingress.com/intel?ll='+map.getCenter().lat+','+map.getCenter().lng+'&z='+map.getZoom()+'&pls='+stockLinks.map(function(link){return link.join(',');}).join('_');
 				var stockWarnTexts = [];
 				if(stockWarnings.polyAsLine) stockWarnTexts.push('Note: polygons are exported as lines');
 				if(stockLinks.length>40) stockWarnTexts.push('Warning: Stock intel may not work with more than 40 line segments - there are '+stockLinks.length);
@@ -330,7 +330,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
 		try{
             // first see if it looks like a URL-format stock intel link, and if so, try and parse out any stock drawn items
             // from the pls parameter
-            if(dataStringImported.match(new RegExp("^(https?://)?(www\\.)ingress\\.com/intel.*[?&]pls="))){
+            if(dataStringImported.match(new RegExp("^(https?://)?(intel\\.)ingress\\.com/intel.*[?&]pls="))){
                 //looks like a ingress URL that has drawn items...
                 var items = dataStringImported.split(/[?&]/);
                 var foundAt = -1;
@@ -395,7 +395,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
         try{
             // first see if it looks like a URL-format stock intel link, and if so, try and parse out any stock drawn items
             // from the pls parameter
-            if (dataStringImported.match(new RegExp("^(https?://)?(www\\.)ingress\\.com/intel.*[?&]pls="))) {
+            if (dataStringImported.match(new RegExp("^(https?://)?(intel\\.)ingress\\.com/intel.*[?&]pls="))) {
                 //looks like a ingress URL that has drawn items...
                 var items = dataStringImported.split(/[?&]/);
                 var foundAt = -1;

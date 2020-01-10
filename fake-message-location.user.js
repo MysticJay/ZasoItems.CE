@@ -126,7 +126,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
         return currLoc;
     }
     window.plugin.fakeMsgLoc.data.getFakePermalink = function(){
-        var url = 'https://www.ingress.com/intel';
+        var url = 'https://intel.ingress.com/';
         var loc = window.plugin.fakeMsgLoc.data.getFakeLoc();
 
         if(loc === false){ return false; }

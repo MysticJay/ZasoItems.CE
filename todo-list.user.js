@@ -257,7 +257,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
         var zoom = (isPortal === true)? 17 : map.getZoom();
         var ll = latlng.lat+','+latlng.lng;
         var portal = (isPortal === true)? '&pll='+ll : '';
-        var permalink = 'https://www.ingress.com/intel?ll='+ll+'&z='+zoom+portal;
+        var permalink = 'https://intel.ingress.com/intel?ll='+ll+'&z='+zoom+portal;
 
         return permalink;
     }
