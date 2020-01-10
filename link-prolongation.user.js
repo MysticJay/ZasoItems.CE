@@ -2,19 +2,12 @@
 // @id             iitc-plugin-link-prolongation@Zaso
 // @name           IITC plugin: Link Prolongation
 // @category       Layers
-// @version        0.1.0.20180217.123738
+// @version        0.1.1.20200110.190101
 // @namespace      http://www.giacintogarcea.com/ingress/items/
-// @updateURL      http://www.giacintogarcea.com/ingress/iitc/link-prolongation-by-zaso.meta.js
-// @downloadURL    http://www.giacintogarcea.com/ingress/iitc/link-prolongation-by-zaso.user.js
+// @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/link-prolongation.user.js
+// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/link-prolongation.user.js
 // @description    Create link prolongations.
-// @include        https://*.ingress.com/intel*
-// @include        http://*.ingress.com/intel*
-// @match          https://*.ingress.com/intel*
-// @match          http://*.ingress.com/intel*
-// @include        https://*.ingress.com/mission/*
-// @include        http://*.ingress.com/mission/*
-// @match          https://*.ingress.com/mission/*
-// @match          http://*.ingress.com/mission/*
+// @match          https://intel.ingress.com/*
 // @grant          none
 // ==/UserScript==
 
@@ -23,7 +16,9 @@ function wrapper(){
 if(typeof window.plugin !== 'function') window.plugin = function(){};
 
 // PLUGIN START ////////////////////////////////////////////////////////
-
+// history
+// 0.1.1 headers changed. Ready for IITC-CE
+// 0.1.0 Original script
 	// use own namespace for plugin
 	window.plugin.linkProlongation = function(){};
 
@@ -435,7 +430,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
         // Append all folders and bookmarks
         r = ''
             +'<div id="bkmrksAutoDrawer">'
-                + '<p style="margin-bottom:9px;color:#f66;text-align:center;">You must select 1 portal!</p>'  
+                + '<p style="margin-bottom:9px;color:#f66;text-align:center;">You must select 1 portal!</p>'
 //                + '<div onclick="window.plugin.bookmarks.autoDrawOnSelect();return false;">'
                     + element
 //                + '</div>'
@@ -633,7 +628,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
             width: 310,
 			dialogClass: 'ui-dialog-linkProlongation linkProlongation settings'
         });
-    }   
+    }
 
     window.plugin.linkProlongation.dialog.openBoxMessage = function(html){
         dialog({

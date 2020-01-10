@@ -2,19 +2,12 @@
 // @id             iitc-plugin-draw-tools-plus@Zaso
 // @name           IITC plugin: draw tools plus
 // @category       Layer
-// @version        0.1.8.20180217.123738
+// @version        0.1.9.20200110.190101
 // @namespace      http://www.giacintogarcea.com/ingress/items/
-// @updateURL      http://www.giacintogarcea.com/ingress/iitc/draw-tools-plus-by-zaso.meta.js
-// @downloadURL    http://www.giacintogarcea.com/ingress/iitc/draw-tools-plus-by-zaso.user.js
+// @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/draw-tools-plus.user.js
+// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/draw-tools-plus.user.js
 // @description    Edit and improve Draw tools.
-// @include        https://*.ingress.com/intel*
-// @include        http://*.ingress.com/intel*
-// @match          https://*.ingress.com/intel*
-// @match          http://*.ingress.com/intel*
-// @include        https://*.ingress.com/mission/*
-// @include        http://*.ingress.com/mission/*
-// @match          https://*.ingress.com/mission/*
-// @match          http://*.ingress.com/mission/*
+// @match          https://intel.ingress.com/*
 // @grant          none
 // ==/UserScript==
 
@@ -23,7 +16,9 @@ function wrapper(){
 if(typeof window.plugin !== 'function') window.plugin = function(){};
 
 // PLUGIN START ////////////////////////////////////////////////////////
-
+// history
+// 0.1.9 Headers updated. Ready for IITC-CE
+// 0.1.8 Original script
     /*
     // "color" is optional
     window.plugin.drawToolsPlus.drawPolyline(arrCoordArr, color);
@@ -417,7 +412,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
                 for (var i=0; i<linesStr.length; i++) {
                     var floats = linesStr[i].split(',').map(Number);
                     if (floats.length != 4) throw("URL item not a set of four floats");
-                    for (var j=0; j<floats.length; j++) {   
+                    for (var j=0; j<floats.length; j++) {
                     if (isNaN(floats[j])) throw("URL item had invalid number");
                   }
                     var layer = L.geodesicPolyline([[floats[0],floats[1]],[floats[2],floats[3]]], window.plugin.drawTools.lineOptions);
@@ -448,7 +443,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
         }
     }
     window.plugin.drawToolsPlus.optPaste = function(){
-        var promptAction = prompt('Press CTRL+V to paste (draw-tools data or stock intel URL).', '');   
+        var promptAction = prompt('Press CTRL+V to paste (draw-tools data or stock intel URL).', '');
         if(promptAction !== null && promptAction !== ''){
             window.plugin.drawToolsPlus.paste(promptAction);
         }

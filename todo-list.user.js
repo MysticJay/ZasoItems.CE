@@ -2,19 +2,12 @@
 // @id             iitc-plugin-todo-list@Zaso
 // @name           IITC plugin: To Do List
 // @category       Misc
-// @version        0.0.2.20180217.123738
+// @version        0.0.3.20200110.190101
 // @namespace      http://www.giacintogarcea.com/ingress/items/
-// @updateURL      http://www.giacintogarcea.com/ingress/iitc/todo-list-by-zaso.meta.js
-// @downloadURL    http://www.giacintogarcea.com/ingress/iitc/todo-list-by-zaso.user.js
+// @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/todo-list.meta.js
+// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/todo-list.user.js
 // @description    Add a To Do List.
-// @include        https://*.ingress.com/intel*
-// @include        http://*.ingress.com/intel*
-// @match          https://*.ingress.com/intel*
-// @match          http://*.ingress.com/intel*
-// @include        https://*.ingress.com/mission/*
-// @include        http://*.ingress.com/mission/*
-// @match          https://*.ingress.com/mission/*
-// @match          http://*.ingress.com/mission/*
+// @match          https://intel.ingress.com/*
 // @grant          none
 // ==/UserScript==
 
@@ -23,6 +16,10 @@ function wrapper(){
 if(typeof window.plugin !== 'function') window.plugin = function(){};
 
 // PLUGIN START ////////////////////////////////////////////////////////
+// History
+// 0.0.3 Headers changed. Ready for IITC-CE
+// 0.0.2 Original sript
+
 
 	// use own namespace for plugin
 	window.plugin.todolist = function(){};

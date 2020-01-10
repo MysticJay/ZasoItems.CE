@@ -2,19 +2,12 @@
 // @id             iitc-plugin-bring-portals-to-front@Zaso
 // @name           IITC plugin: Bring Portals To Front
 // @category       Tweaks
-// @version        0.0.1.20180217.123738
+// @version        0.0.2.20200110.190101
 // @namespace      http://www.giacintogarcea.com/ingress/items/
-// @updateURL      http://www.giacintogarcea.com/ingress/iitc/bring-portals-to-front-by-zaso.meta.js
-// @downloadURL    http://www.giacintogarcea.com/ingress/iitc/bring-portals-to-front-by-zaso.user.js
+// @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/bring-portals-to-front.meta.js
+// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/bring-portals-to-front.user.js
 // @description    Bring the portals layers to front. Prevents that fields and drawn items cover them, making them unclickable.
-// @include        https://*.ingress.com/intel*
-// @include        http://*.ingress.com/intel*
-// @match          https://*.ingress.com/intel*
-// @match          http://*.ingress.com/intel*
-// @include        https://*.ingress.com/mission/*
-// @include        http://*.ingress.com/mission/*
-// @match          https://*.ingress.com/mission/*
-// @match          http://*.ingress.com/mission/*
+// @match          https://intel.ingress.com/*
 // @grant          none
 // ==/UserScript==
 
@@ -23,6 +16,9 @@ function wrapper(){
 if(typeof window.plugin !== 'function') window.plugin = function(){};
 
 // PLUGIN START ////////////////////////////////////////////////////////
+// history
+// 0.0.2 headers changed, ready for IITC-CE
+// 0.0.1 Original Script
 
 	// use own namespace for plugin
 	window.plugin.bringPortalsToFront = function(){};

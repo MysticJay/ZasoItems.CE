@@ -2,19 +2,13 @@
 // @id             iitc-plugin-localstorage-manager@Zaso
 // @name           IITC plugin: LocalStorage Manager
 // @category       Debug
-// @version        0.1.0.20180217.123738
+// @version        0.1.1.20200110.190101
 // @namespace      http://www.giacintogarcea.com/ingress/items/
-// @updateURL      http://www.giacintogarcea.com/ingress/iitc/localstorage-manager-by-zaso.meta.js
-// @downloadURL    http://www.giacintogarcea.com/ingress/iitc/localstorage-manager-by-zaso.user.js
+// @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/localstorage-manager.meta.js
+// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/localstorage-manager.user.js
 // @description    Manage LocalStorage: import, export and delete.
-// @include        https://*.ingress.com/intel*
-// @include        http://*.ingress.com/intel*
-// @match          https://*.ingress.com/intel*
-// @match          http://*.ingress.com/intel*
-// @include        https://*.ingress.com/mission/*
-// @include        http://*.ingress.com/mission/*
-// @match          https://*.ingress.com/mission/*
-// @match          http://*.ingress.com/mission/*
+// @match          https://intel.ingress.com/*
+
 // @grant          none
 // ==/UserScript==
 
@@ -23,6 +17,9 @@ function wrapper(){
 if(typeof window.plugin !== 'function') window.plugin = function(){};
 
 // PLUGIN START ////////////////////////////////////////////////////////
+// History
+// 0.1.1 Headers changed. Ready for IITC-CE
+// 0.1.0 Original sript
 
 	// use own namespace for plugin
 	window.plugin.manageStorage = function(){};
