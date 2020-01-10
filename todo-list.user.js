@@ -2,7 +2,7 @@
 // @id             iitc-plugin-todo-list@Zaso
 // @name           IITC plugin: To Do List
 // @category       Misc
-// @version        0.0.3.20200110.212101
+// @version        0.0.3.20200110.222101
 // @namespace      http://www.giacintogarcea.com/ingress/items/
 // @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/todo-list.meta.js
 // @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/todo-list.user.js
@@ -41,7 +41,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
 		var ID = 'id'+ID.toString();
 		return ID;
 	}
-	// Format the string 
+	// Format the string
 	window.plugin.todolist.escapeHtml = function(text) {
 		return text
 				.replace(/&/g, "&amp;")
@@ -700,7 +700,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
         var elem = $('#quickCopy-textarea');
 
         elem.select();
-        document.execCommand('copy');        
+        document.execCommand('copy');
         elem.remove();
 
         var notifyStyle= 'display:none;width:200px;height:20px;height:auto;position:absolute;left:50%;margin-left:-100px;top:20px;z-index:10000;background-color: #383838;color: #F0F0F0;font-family: Calibri;font-size: 20px;padding:10px;text-align:center;border-radius: 2px;box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);}';
@@ -1246,7 +1246,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
                     className: 'toDoList toDoListMarker toDoListPin',
                     html: '<div class="diamond"><div><i class="fa fa-check"></i></div></div>'
                 })
-                
+
             };
             var marker = L.marker(portal.ll, options);
 

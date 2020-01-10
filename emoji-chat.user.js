@@ -2,7 +2,7 @@
 // @id             iitc-plugin-emoji-chat@Zaso
 // @name           IITC plugin: Emoji Chat
 // @category       Tweaks
-// @version        0.0.2.20200110.212101
+// @version        0.0.2.20200110.222101
 // @namespace      http://www.giacintogarcea.com/ingress/items/
 // @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/emoji-chat.meta.js
 // @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/emoji-chat.user.js

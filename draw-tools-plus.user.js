@@ -2,7 +2,7 @@
 // @id             iitc-plugin-draw-tools-plus@Zaso
 // @name           IITC plugin: draw tools plus
 // @category       Layer
-// @version        0.1.9.20200110.212101
+// @version        0.1.9.20200110.222101
 // @namespace      http://www.giacintogarcea.com/ingress/items/
 // @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/draw-tools-plus.meta.js
 // @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/draw-tools-plus.user.js

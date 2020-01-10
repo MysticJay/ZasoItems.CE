@@ -2,7 +2,7 @@
 // @id             iitc-plugin-fake-message-location@Zaso
 // @name           IITC plugin: Fake Message Location
 // @category       Misc
-// @version        0.1.1.20200110.212101
+// @version        0.1.1.20200110.222101
 // @namespace      http://www.giacintogarcea.com/ingress/items/
 // @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/fake-message-location.meta.js
 // @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/fake-message-location.user.js
@@ -217,7 +217,7 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
         var elem = $('#quickCopy-textarea');
 
         elem.select();
-        document.execCommand('copy');        
+        document.execCommand('copy');
         elem.remove();
 
         var notifyStyle= 'display:none;width:200px;height:20px;height:auto;position:absolute;left:50%;margin-left:-100px;top:20px;z-index:10000;background-color: #383838;color: #F0F0F0;font-family: Calibri;font-size: 20px;padding:10px;text-align:center;border-radius: 2px;box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);}';
