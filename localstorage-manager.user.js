@@ -1,22 +1,28 @@
 // ==UserScript==
-// @id             iitc-plugin-localstorage-manager@Zaso
+// @author         Zaso
 // @name           IITC plugin: LocalStorage Manager
 // @category       Debug
-// @version        0.1.1.20200110.212101
-// @namespace      http://www.giacintogarcea.com/ingress/items/
-// @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/localstorage-manager.meta.js
-// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/localstorage-manager.user.js
+// @version        0.1.1.20200216.174029
 // @description    Manage LocalStorage: import, export and delete.
+// @id             localstorage-manager
+// @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
+// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/localstorage-manager.user.js
 // @match          https://intel.ingress.com/*
-
 // @grant          none
 // ==/UserScript==
 
 function wrapper(plugin_info) {
 // ensure plugin framework is there, even if iitc is not yet loaded
-if(typeof window.plugin !== 'function') window.plugin = function(){};
+if(typeof window.plugin !== 'function') window.plugin = function() {};
 
-// PLUGIN START ////////////////////////////////////////////////////////
+//PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
+//(leaving them in place might break the 'About IITC' page or break update checks)
+plugin_info.buildName = 'ZasoItems';
+plugin_info.dateTimeVersion = '2020-02-16-174029';
+plugin_info.pluginId = 'localstorage-manager';
+//END PLUGIN AUTHORS NOTE
+
+// PlUGIN START ////////////////////////////////////////////////////////
 // History
 // 0.1.1 Headers changed. Ready for IITC-CE
 // 0.1.0 Original sript
@@ -178,11 +184,12 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
 
 // PLUGIN END //////////////////////////////////////////////////////////
 
-    setup.info = plugin_info; //add the script info data to the function as a property
-    if(!window.bootPlugins) window.bootPlugins = [];
-    window.bootPlugins.push(setup);
-    // if IITC has already booted, immediately run the 'setup' function
-    if(window.iitcLoaded && typeof setup === 'function') setup();
+
+setup.info = plugin_info; //add the script info data to the function as a property
+if(!window.bootPlugins) window.bootPlugins = [];
+window.bootPlugins.push(setup);
+// if IITC has already booted, immediately run the 'setup' function
+if(window.iitcLoaded && typeof setup === 'function') setup();
 } // wrapper end
 // inject code into site context
 var script = document.createElement('script');

@@ -1,19 +1,26 @@
 // ==UserScript==
-// @id             iitc-plugin-chat-message-length@Zaso
+// @author         Zaso
 // @name           IITC plugin: Chat Message Length
 // @category       Tweaks
-// @version        0.1.3.20200110.212101
-// @namespace      http://www.giacintogarcea.com/ingress/items/
-// @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/chat-message-length.meta.js
-// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/chat-message-length.user.js
+// @version        0.1.3.20200216.174028
 // @description    Counts the chat message characters.
+// @id             chat-message-length
+// @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
+// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/chat-message-length.user.js
 // @match          https://intel.ingress.com/*
 // @grant          none
 // ==/UserScript==
 
 function wrapper(plugin_info) {
 // ensure plugin framework is there, even if iitc is not yet loaded
-if(typeof window.plugin !== 'function') window.plugin = function(){};
+if(typeof window.plugin !== 'function') window.plugin = function() {};
+
+//PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
+//(leaving them in place might break the 'About IITC' page or break update checks)
+plugin_info.buildName = 'ZasoItems';
+plugin_info.dateTimeVersion = '2020-02-16-174028';
+plugin_info.pluginId = 'chat-message-length';
+//END PLUGIN AUTHORS NOTE
 
 // PLUGIN START ////////////////////////////////////////////////////////
 // History
@@ -92,11 +99,11 @@ if(typeof window.plugin !== 'function') window.plugin = function(){};
 
 // PLUGIN END //////////////////////////////////////////////////////////
 
-    setup.info = plugin_info; //add the script info data to the function as a property
-    if(!window.bootPlugins) window.bootPlugins = [];
-    window.bootPlugins.push(setup);
-    // if IITC has already booted, immediately run the 'setup' function
-    if(window.iitcLoaded && typeof setup === 'function') setup();
+setup.info = plugin_info; //add the script info data to the function as a property
+if(!window.bootPlugins) window.bootPlugins = [];
+window.bootPlugins.push(setup);
+// if IITC has already booted, immediately run the 'setup' function
+if(window.iitcLoaded && typeof setup === 'function') setup();
 } // wrapper end
 // inject code into site context
 var script = document.createElement('script');
