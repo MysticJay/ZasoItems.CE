@@ -52,6 +52,7 @@ plugin_info.pluginId = 'hide-ui';
 			if(e.keyCode === 72 && !e.shiftKey && !e.ctrlKey && e.altKey && !e.metaKey){
 				window.plugin.hideUIzaso.toggle();
 			}
+			e.preventDefault();
 		}, false);
 	}
 
