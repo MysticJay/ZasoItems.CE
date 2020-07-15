@@ -85,7 +85,7 @@ plugin_info.pluginId = 'decay-calculator';
 	}
 
 	window.plugin.decayCalculator.risDecay = function(ris){
-		return Math.ceil(ris/15);
+		return Math.ceil(ris/5);
 	}
 
 	window.plugin.decayCalculator.portalNeut = function(risArray){
