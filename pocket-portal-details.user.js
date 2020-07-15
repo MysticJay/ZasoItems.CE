@@ -2,7 +2,7 @@
 // @author         Zaso
 // @name           IITC plugin: Pocket Portal Details
 // @category       Portal Info
-// @version        0.0.5.20200216.174030
+// @version        0.0.5.20200715.125600
 // @description    Append a pocket box containing some restricted details of the selected portal.
 // @id             pocket-portal-details
 // @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
