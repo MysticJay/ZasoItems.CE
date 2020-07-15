@@ -59,6 +59,13 @@ plugin_info.pluginId = 'pocket-portal-details';
 
 	// -----------------------------------------------------------------
 
+  window.plugin.pocketPortalDetails.util.escapeHTML = function(text){
+    return text
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/&/g, '&amp;')
+  };
 	window.plugin.pocketPortalDetails.util.getPortalColorTeam = function(data){
 		var d = data.portalDetails;
 
@@ -276,7 +283,7 @@ plugin_info.pluginId = 'pocket-portal-details';
 		// HTML TOOLTIP
 		// --------------------------
 		var tableObjPortal = {
-			'Title': title,
+			'Title': window.plugin.pocketPortalDetails.util.escapeHTML(title),
 			'Owner': '<span style=\'color:'+colorTeam+'\'>'+owner+'</span>',
 			'Level': '<span style=\'padding:0 2px;color:#fff;background-color:'+window.COLORS_LVL[lvl]+'\'>L'+lvl+'</span> ('+lvlFloat+')'
 		};
