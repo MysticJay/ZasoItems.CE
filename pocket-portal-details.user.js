@@ -158,7 +158,7 @@ plugin_info.pluginId = 'pocket-portal-details';
 
 			switch(modName){
 				case 'Portal Shield': modShortName = 'S'; break;
-				case 'AXA Shield': modShortName = 'AX'; break;
+				case 'Aegis Shield': modShortName = 'AS'; break;
 
 				case 'Heat Sink': modShortName = 'HS'; break;
 				case 'Multi-hack': modShortName = 'MH'; break;
