@@ -1,26 +1,8 @@
-// ==UserScript==
 // @author         Zaso
-// @name           IITC plugin: Pocket Portal Details
+// @name           Pocket Portal Details
 // @category       Portal Info
-// @version        0.0.6.20200723.154151
+// @version        0.0.6
 // @description    Append a pocket box containing some restricted details of the selected portal.
-// @id             pocket-portal-details
-// @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
-// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/pocket-portal-details.user.js
-// @match          https://intel.ingress.com/*
-// @grant          none
-// ==/UserScript==
-
-function wrapper(plugin_info) {
-// ensure plugin framework is there, even if iitc is not yet loaded
-if(typeof window.plugin !== 'function') window.plugin = function() {};
-
-//PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
-//(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'ZasoItems';
-plugin_info.dateTimeVersion = '2020-07-23-154151';
-plugin_info.pluginId = 'pocket-portal-details';
-//END PLUGIN AUTHORS NOTE
 
 
 
@@ -500,17 +482,3 @@ plugin_info.pluginId = 'pocket-portal-details';
   }
 
 // PLUGIN END //////////////////////////////////////////////////////////
-
-setup.info = plugin_info; //add the script info data to the function as a property
-if(!window.bootPlugins) window.bootPlugins = [];
-window.bootPlugins.push(setup);
-// if IITC has already booted, immediately run the 'setup' function
-if(window.iitcLoaded && typeof setup === 'function') setup();
-} // wrapper end
-// inject code into site context
-var script = document.createElement('script');
-var info = {};
-if (typeof GM_info !== 'undefined' && GM_info && GM_info.script) info.script = { version: GM_info.script.version, name: GM_info.script.name, description: GM_info.script.description };
-script.appendChild(document.createTextNode('('+ wrapper +')('+JSON.stringify(info)+');'));
-(document.body || document.head || document.documentElement).appendChild(script);
-
