@@ -26,9 +26,8 @@
 	// MODDING DRAW TOOLS
 	// ---------------------------------------------------------------------------------
 	window.plugin.drawToolsPlus.boot = function(){
-		// REWRITE DRAW FUNCIONS
-		// EXPAND DRAW TOOLS - MULTI STORAGE FOR PROJECTS
 		window.plugin.drawToolsPlus.storageKEY = 'plugin-draw-tools-layer';
+        // Add FA icon to sidebar
 		window.addHook('iitcLoaded', function(){
 			$('#toolbox a:contains(\'DrawTools Opt\')').addClass('list-group-item').prepend('<i class="fa fa-pencil"></i>');
 		});
@@ -56,14 +55,6 @@
         if(color !== undefined){ window.plugin.drawTools.setDrawColor(oldColor); }
 
         return layer;
-/*
-        var drawOpt = window.plugin.drawTools.lineOptions;
-        var arrCoordArr = [[42.447585,13.285419],[41.692902,13.418577]];
-//        var layer = L.polyline(arrCoordArr, drawOpt);
-        var layer = L.geodesicPolyline(arrCoordArr, drawOpt);
-        var layerType = 'polyline';
-        window.plugin.drawToolsPlus.fireDraw(layer, layerType);
-*/
     }
 	window.plugin.drawToolsPlus.drawPolygon = function(arrCoordArr, color){
         if(color !== undefined){
@@ -127,10 +118,9 @@
 		).appendTo("head");
 	}
 
-	var setup = function(){                             // If "draw tool plus" is loaded before "draw tools"
-		if(window.plugin.drawTools){
+	var setup = function(){                             
+		if(window.plugin.drawTools){                 
             window.pluginCreateHook('pluginDrawTools'); 
-
 			window.plugin.drawToolsPlus.boot();
 			window.plugin.drawToolsPlus.setupCSS();
 		}
