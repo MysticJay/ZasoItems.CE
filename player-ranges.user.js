@@ -2,7 +2,7 @@
 // @author         Zaso
 // @name           IITC plugin: Player Ranges
 // @category       Layer
-// @version        0.3.1.20200216.174030
+// @version        0.3.1.20210103.154230
 // @description    Add one or more player markers and his ranges (hack/deploy range and xmp ranges) on the map.
 // @id             player-ranges
 // @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
@@ -18,7 +18,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'ZasoItems';
-plugin_info.dateTimeVersion = '2020-02-16-174030';
+plugin_info.dateTimeVersion = '2021-01-03-154230';
 plugin_info.pluginId = 'player-ranges';
 //END PLUGIN AUTHORS NOTE
 
@@ -573,8 +573,8 @@ plugin_info.pluginId = 'player-ranges';
 			+'.playerInList .editBtn{width:10%;text-align:center;margin-left:3%;}'
 			+'.playerInList .gotoBtn{width:66%;text-indent:6px;}'
 
-			+'.playerRanges select{ background-color:rgba(0,0,0,.3); color:#ffce00; border:none; }'
-			+'.playerRanges select option{ background-color:rgb(21,44,65); }'
+			+'.prPlayerDetails select{ background-color:rgba(0,0,0,.3); color:#ffce00; border:none; }'
+			+'.prPlayerDetails select option{ background-color:rgb(21,44,65); }'
 
 			+'.ui-dialog-prPlayerDetails .ui-dialog-buttonset button{ margin-left:7px; }'
 			+'.ui-dialog-prPlayerDetails .ui-dialog-buttonset button:first{ margin-left:0; }'

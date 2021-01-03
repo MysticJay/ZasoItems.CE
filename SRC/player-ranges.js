@@ -555,8 +555,8 @@
 			+'.playerInList .editBtn{width:10%;text-align:center;margin-left:3%;}'
 			+'.playerInList .gotoBtn{width:66%;text-indent:6px;}'
 
-			+'.playerRanges select{ background-color:rgba(0,0,0,.3); color:#ffce00; border:none; }'
-			+'.playerRanges select option{ background-color:rgb(21,44,65); }'
+			+'.prPlayerDetails select{ background-color:rgba(0,0,0,.3); color:#ffce00; border:none; }'
+			+'.prPlayerDetails select option{ background-color:rgb(21,44,65); }'
 
 			+'.ui-dialog-prPlayerDetails .ui-dialog-buttonset button{ margin-left:7px; }'
 			+'.ui-dialog-prPlayerDetails .ui-dialog-buttonset button:first{ margin-left:0; }'
