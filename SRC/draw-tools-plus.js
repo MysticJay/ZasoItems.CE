@@ -118,12 +118,12 @@
 		).appendTo("head");
 	}
 
-	var setup = function(){                             
+	function setup (){                             
 		if(window.plugin.drawTools){                 
             window.pluginCreateHook('pluginDrawTools'); 
 			window.plugin.drawToolsPlus.boot();
 			window.plugin.drawToolsPlus.setupCSS();
 		}
 	}
-.
+
 // PLUGIN END //////////////////////////////////////////////////////////
