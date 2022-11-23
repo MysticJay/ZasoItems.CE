@@ -123,8 +123,8 @@
 	}
 	window.plugin.layersProfiles.layer.getAllB = function(){
 		$.each(layerChooser._layers, function(index, chooserEntry){
-			//If "undefined" is a baselayer
-			if(chooserEntry.overlay == undefined){
+			//If "undefined" or "false" is a baselayer
+			if (!chooserEntry.overlay) {
 //				var display = window.map.hasLayer(chooserEntry.layer);
 				window.plugin.layersProfiles.obj.allLay.b[chooserEntry.name] = index;
 			}
@@ -256,6 +256,7 @@
 	// DIALOG FUNCTIONS
 	//----------------------------------------------------------------------------------
 	window.plugin.layersProfiles.dialog.openMain = function(){
+    window.plugin.layersProfiles.layer.getAll();
 		var html = '';
 
 			var isCheckedB = '';

@@ -2,7 +2,7 @@
 // @author         Zaso
 // @name           IITC plugin: Layers Profiles
 // @category       Controls
-// @version        0.1.2.20200216.174029
+// @version        0.1.2.20221123.180924
 // @description    Saves the current enabled layers (base, overlays and hightlighter). Restore it just a click.
 // @id             layers-profiles
 // @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
@@ -18,7 +18,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'ZasoItems';
-plugin_info.dateTimeVersion = '2020-02-16-174029';
+plugin_info.dateTimeVersion = '2022-11-23-180924';
 plugin_info.pluginId = 'layers-profiles';
 //END PLUGIN AUTHORS NOTE
 
@@ -141,8 +141,8 @@ plugin_info.pluginId = 'layers-profiles';
 	}
 	window.plugin.layersProfiles.layer.getAllB = function(){
 		$.each(layerChooser._layers, function(index, chooserEntry){
-			//If "undefined" is a baselayer
-			if(chooserEntry.overlay == undefined){
+			//If "undefined" or "false" is a baselayer
+			if (!chooserEntry.overlay) {
 //				var display = window.map.hasLayer(chooserEntry.layer);
 				window.plugin.layersProfiles.obj.allLay.b[chooserEntry.name] = index;
 			}
@@ -274,6 +274,7 @@ plugin_info.pluginId = 'layers-profiles';
 	// DIALOG FUNCTIONS
 	//----------------------------------------------------------------------------------
 	window.plugin.layersProfiles.dialog.openMain = function(){
+    window.plugin.layersProfiles.layer.getAll();
 		var html = '';
 
 			var isCheckedB = '';
