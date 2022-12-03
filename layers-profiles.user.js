@@ -6,6 +6,7 @@
 // @description    Saves the current enabled layers (base, overlays and hightlighter). Restore it just a click.
 // @id             layers-profiles
 // @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
+// @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/layers-profiles.user.js
 // @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/layers-profiles.user.js
 // @match          https://intel.ingress.com/*
 // @grant          none
@@ -18,7 +19,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'ZasoItems';
-plugin_info.dateTimeVersion = '2022-12-03-213308';
+plugin_info.dateTimeVersion = '2022-12-03-220528';
 plugin_info.pluginId = 'layers-profiles';
 //END PLUGIN AUTHORS NOTE
 
