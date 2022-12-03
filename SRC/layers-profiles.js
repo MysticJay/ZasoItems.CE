@@ -408,7 +408,7 @@
 
 		if(config['b']){
 			html += '<dt>Baselayer:</dt>';
-			if(!window.plugin.layersProfiles.obj.allLay.b[config.b]){
+			if(window.plugin.layersProfiles.obj.allLay.b[config.b] === undefined){ // baselayers' ids start from 0
 				classStyle = styleRed;
 			}
 			html += '<dd '+classStyle+'>'+config.b+';</dd>';
