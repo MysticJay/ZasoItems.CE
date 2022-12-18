@@ -2,13 +2,14 @@
 // @author         Zaso
 // @name           IITC plugin: Layers Profiles
 // @category       Controls
-// @version        0.1.3
+// @version        0.1.4
 // @description    Saves the current enabled layers (base, overlays and hightlighter). Restore it just a click.
 // @id             layers-profiles
 // @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
 // @updateURL      https://github.com/MysticJay/ZasoItems.CE/raw/master/layers-profiles.user.js
 // @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/layers-profiles.user.js
 // @match          https://intel.ingress.com/*
+// @match          https://intel-x.ingress.com/*
 // @grant          none
 // ==/UserScript==
 
@@ -19,7 +20,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'ZasoItems';
-plugin_info.dateTimeVersion = '2022-12-03-220528';
+plugin_info.dateTimeVersion = '2022-12-18-193146';
 plugin_info.pluginId = 'layers-profiles';
 //END PLUGIN AUTHORS NOTE
 
@@ -27,6 +28,7 @@ plugin_info.pluginId = 'layers-profiles';
 
 // PLUGIN START ////////////////////////////////////////////////////////
 // History
+// 0.1.4 fix Highlighters
 // 0.1.3 fix Maps and Ornaments
 // 0.1.2 headers chnaged. Ready for IITC-CE
 // 0.1.1 Original script
@@ -152,9 +154,11 @@ plugin_info.pluginId = 'layers-profiles';
     return window.plugin.layersProfiles.obj.allLay.b;
   }
   window.plugin.layersProfiles.layer.getAllH = function(){
-    var arr = Object.keys(window._highlighters);
-    for(var i = 0; i < arr.length; ++i){
-      window.plugin.layersProfiles.obj.allLay.h[arr[i]] = 1;
+    if (window._highlighters) {
+      var arr = Object.keys(window._highlighters);
+      for(var i = 0; i < arr.length; ++i){
+        window.plugin.layersProfiles.obj.allLay.h[arr[i]] = 1;
+      }
     }
     window.plugin.layersProfiles.obj.allLay.h['No Highlights'] = 1;
     return window.plugin.layersProfiles.obj.allLay.h;

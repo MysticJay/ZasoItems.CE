@@ -1,13 +1,14 @@
 // @author         Zaso
 // @name           Layers Profiles
 // @category       Controls
-// @version        0.1.3
+// @version        0.1.4
 // @description    Saves the current enabled layers (base, overlays and hightlighter). Restore it just a click.
 
 
 
 // PLUGIN START ////////////////////////////////////////////////////////
 // History
+// 0.1.4 fix Highlighters
 // 0.1.3 fix Maps and Ornaments
 // 0.1.2 headers chnaged. Ready for IITC-CE
 // 0.1.1 Original script
