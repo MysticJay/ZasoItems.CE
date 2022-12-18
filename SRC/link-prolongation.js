@@ -23,7 +23,7 @@
 	window.plugin.linkProlongation.bookmarks = {};
 
 	window.plugin.linkProlongation.obj.status = { dist:1, drawType:5, drawColor:{enabled:0, value:'#f66'}};
-	window.plugin.linkProlongation.obj.points = {p1:new L.LatLng(0,0), p2:new L.LatLng(0,0)};
+	window.plugin.linkProlongation.obj.points = {};
 	window.plugin.linkProlongation.obj.supp = {};
 
     //-----------------------------------
@@ -833,6 +833,7 @@
     //-----------------------------------
 
 	var setup = function(){
+    window.plugin.linkProlongation.obj.points = {p1:new L.LatLng(0,0), p2:new L.LatLng(0,0)};
         window.plugin.linkProlongation.thirdParty();
 		window.plugin.linkProlongation.ui.setupCSS();
         window.plugin.linkProlongation.storage.check();
