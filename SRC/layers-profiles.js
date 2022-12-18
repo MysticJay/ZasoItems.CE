@@ -133,9 +133,11 @@
     return window.plugin.layersProfiles.obj.allLay.b;
   }
   window.plugin.layersProfiles.layer.getAllH = function(){
-    var arr = Object.keys(window._highlighters);
-    for(var i = 0; i < arr.length; ++i){
-      window.plugin.layersProfiles.obj.allLay.h[arr[i]] = 1;
+    if (window._highlighters) {
+      var arr = Object.keys(window._highlighters);
+      for(var i = 0; i < arr.length; ++i){
+        window.plugin.layersProfiles.obj.allLay.h[arr[i]] = 1;
+      }
     }
     window.plugin.layersProfiles.obj.allLay.h['No Highlights'] = 1;
     return window.plugin.layersProfiles.obj.allLay.h;
