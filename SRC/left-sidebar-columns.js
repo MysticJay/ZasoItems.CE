@@ -1,5 +1,5 @@
 // @author         Zaso
-// @name           IITC plugin: Left Sidebar Columns
+// @name           Left Sidebar Columns
 // @category       Tweaks
 // @version        0.0.2
 // @description    Organizes the controller in the left sidebar in two columns.

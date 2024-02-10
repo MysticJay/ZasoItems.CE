@@ -1,8 +1,8 @@
 // ==UserScript==
 // @author         Zaso
-// @name           IITC plugin: IITC plugin: Left Sidebar Columns
+// @name           IITC plugin: Left Sidebar Columns
 // @category       Tweaks
-// @version        0.0.2.20240210.130254
+// @version        0.0.2.20240210.131710
 // @description    Organizes the controller in the left sidebar in two columns.
 // @id             left-sidebar-columns
 // @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
@@ -20,7 +20,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'ZasoItems';
-plugin_info.dateTimeVersion = '2024-02-10-130254';
+plugin_info.dateTimeVersion = '2024-02-10-131710';
 plugin_info.pluginId = 'left-sidebar-columns';
 //END PLUGIN AUTHORS NOTE
 
